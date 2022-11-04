@@ -13,14 +13,10 @@ const defaultMenu = {
 ├ Level *%level (%exp / %maxexp)* [%xp4levelup]
 ├ %totalexp XP secara Total
 │
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
+├ hari: *%week %weton, %date*
+├ hari islam: *%dateIslamic*
 ├ Waktu: *%time*
 │
-├ Uptime: *%uptime (%muptime)*
-├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
 └────
 %readmore`.trim(),
   header: '┌─〔 %category 〕',
@@ -221,7 +217,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       footer: wm,
       mentions: await conn.parseMention(judul),
       title: '',
-      buttonText: "Klik Disini",
+      buttonText: "Klik Disini❦~",
       sections
     }
     return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
@@ -315,7 +311,7 @@ function ucapan() {
     res = "Selamat pagi"
   }
   if (time > 10) {
-    res = "Selamat siang"
+    res = "Selamat tengah hari"
   }
   if (time >= 15) {
     res = "Selamat sore"
